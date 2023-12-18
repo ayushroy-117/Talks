@@ -48,7 +48,7 @@ export default function Create() {
         data.append('file', files[0]);
 
         try {
-            const response = await fetch('http://localhost:4000/post', {
+            const response = await fetch('https://talksss.vercel.app/post', {
                 method: 'POST',
                 body: data,
                 credentials: 'include',
