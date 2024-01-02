@@ -9,7 +9,7 @@ export default function PostPage() {
     const { userInfo } = useContext(UserContext);
     const { id } = useParams();
     useEffect(() => {
-        fetch(`https://talksss.vercel.app/post/${id}`)
+        fetch(`https://https://talks-ashen.vercel.app/post/${id}`)
             .then(response => {
                 response.json().then(postInfo => {
                     setPostInfo(postInfo);
