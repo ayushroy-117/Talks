@@ -12,7 +12,7 @@ import CreatePost from './Pages/CreatePost';
 import PostPage from './Pages/PostPage';
 import EditPost from './Pages/EditPost';
 
-const backendUrl = 'https://talks-ashen.vercel.app/'; // Replace with your actual backend URL
+const backendUrl = 'https://talksss-ayushroy-117.vercel.app/'; // Replace with your actual backend URL
 
 const axiosInstance = axios.create({
   baseURL: `${backendUrl}/api`, // Adjust the path if your API is not at the root level
