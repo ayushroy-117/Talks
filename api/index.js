@@ -22,7 +22,12 @@ mongoose.connect("mongodb+srv://Talks:hinxybncXszTD7u7@talks-blog.akdzdx7.mongod
     .then(() => console.log("Database Connected"))
     .catch((e) => console.log(e));
 
-app.use(cors({ credentials: true, origin: 'https://talks-icb9.vercel.app' }));
+app.use(cors({
+  credentials: true,
+  origin: 'https://talks-icb9.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.options('*', cors());
 app.use(express.json());
 app.use(cookieParser());
