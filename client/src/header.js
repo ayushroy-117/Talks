@@ -26,7 +26,7 @@ export default function Header() {
 
     const logout = async () => {
         try {
-            await fetch('http://localhost:4000/logout', {
+            await fetch('https://talks-rho.vercel.app/logout', {
                 credentials: 'include',
                 method: 'POST',
             });
