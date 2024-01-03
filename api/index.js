@@ -23,6 +23,7 @@ mongoose.connect("mongodb+srv://Talks:hinxybncXszTD7u7@talks-blog.akdzdx7.mongod
     .catch((e) => console.log(e));
 
 app.use(cors({ credentials: true, origin: 'https://talks-icb9.vercel.app' }));
+app.options('*', cors());
 app.use(express.json());
 app.use(cookieParser());
 
