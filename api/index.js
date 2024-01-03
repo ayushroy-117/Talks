@@ -22,7 +22,11 @@ mongoose.connect("mongodb+srv://Talks:hinxybncXszTD7u7@talks-blog.akdzdx7.mongod
     .then(() => console.log("Database Connected"))
     .catch((e) => console.log(e));
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://talks-icb9.vercel.app'],
+  methods: ['POST', 'GET'], 
+  credentials: true
+}));
 
 
 app.use(express.json());
