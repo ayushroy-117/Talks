@@ -11,7 +11,7 @@ export default function EditPost() {
     const [redirect, setRedirect] = useState(false);
 
     useEffect(() => {
-        fetch('https://talks-ashen.vercel.app/post/' + id)
+        fetch('https://talks-rho.vercel.app/post/' + id)
             .then(response => {
                 response.json().then(postInfo => {
                     setTitle(postInfo.title);
