@@ -8,7 +8,7 @@ export default function Header() {
     useEffect(() => {
         const fetchUserInfo = async () => {
             try {
-                const response = await fetch('http://localhost:4000/profile', {
+                const response = await fetch('https://talks-rho.vercel.app/profile', {
                     credentials: 'include',
                 });
 
