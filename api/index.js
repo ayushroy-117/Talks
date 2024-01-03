@@ -22,14 +22,8 @@ mongoose.connect("mongodb+srv://Talks:hinxybncXszTD7u7@talks-blog.akdzdx7.mongod
     .then(() => console.log("Database Connected"))
     .catch((e) => console.log(e));
 
-app.use(cors({ credentials: '*', origin: 'https://talks-icb9.vercel.app' }));
-app.options('*', cors());  // Handle preflight requests
-app.options('*', (req, res) => {
-  res.header('Access-Control-Allow-Origin', 'https://talks-icb9.vercel.app');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.send();
-});
+app.use(cors());
+
 
 app.use(express.json());
 app.use(cookieParser());
